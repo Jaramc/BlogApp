@@ -1,6 +1,7 @@
 package com.blog.app.demo.Models;
 
 import com.blog.app.demo.Utils.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -27,6 +28,7 @@ public class User implements UserDetails {
     private String firstName;
     private String lastName;
     Role role;
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Post> posts;
 

@@ -4,6 +4,7 @@ import com.blog.app.demo.Requests.LoginRequest;
 import com.blog.app.demo.Requests.RegisterRequest;
 import com.blog.app.demo.Responses.AuthResponse;
 import com.blog.app.demo.Services.AuthService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
+@Tag(name="Auth Controller")
 public class AuthController {
     private final AuthService authService;
 
