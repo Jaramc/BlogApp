@@ -11,7 +11,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,7 +19,6 @@ import java.util.stream.Collectors;
 public class PostService {
     private final PostRepository postRepository;
     private final UserRepository userRepository;
-
 
     public PostResponse getPost(Long postId) {
         Post post = postRepository.findById(postId)
@@ -66,7 +64,7 @@ public class PostService {
                 .build();
 
         return PostResponse.builder()
-                .id(post.getId().intValue())
+                .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
                 .user(userResponse)
@@ -93,7 +91,7 @@ public class PostService {
                 .build();
 
         return PostResponse.builder()
-                .id(post.getId().intValue())
+                .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
                 .user(userResponse)
