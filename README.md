@@ -183,7 +183,7 @@ Relacionando los modelos de esta manera se logra obtener fácilmente el autor de
 Para inicializar el poryecto localmente es altamente recomendado utilizar un servicio local de base de datos, personalmente recomiendo utilizar [Docker](), el cual facilita muchho el tema de montar la aplicación, si no es el caso, se puede usar un servicio en la nube. O 
 metodos más tradicionales como [XAMPP]()
 
->[!DANGER]
+>[!CAUTION]
 >En el archivo `application.properties` es importante modificar las credenciales de base de datos antes de iniciar el proyecto.
 
 ## Run
